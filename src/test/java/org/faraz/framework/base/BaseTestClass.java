@@ -14,6 +14,7 @@ public class BaseTestClass {
         driver = DriverManager.getChromeDriver();
         driver.manage().window().maximize();
         driver.get(readConfigFile.getBaseUrlUi());
+        System.out.println();
         System.out.println("Browser launched and navigated to: " + readConfigFile.getBaseUrlUi());
     }
 
@@ -23,4 +24,9 @@ public class BaseTestClass {
         DriverManager.quitDriver();
         System.out.println("Browser Closed");
     }
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
 }
